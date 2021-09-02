@@ -17,7 +17,7 @@ string Format::ElapsedTime(long seconds) {
   mins = (seconds / 3600.0 - hrs) * 60;
   secs = ((seconds / 3600.0 - hrs) * 60.0 - mins) * 60;
 
-  s = (hrs>9 ? "":"0")+std::to_string(hrs) + ":" + std::to_string(mins) + ":" + std::to_string((int)secs);
+  s = (hrs>9 ? "":"0") + std::to_string(hrs) + ":" + (mins>9 ? "":"0") + std::to_string(mins) + ":" + (secs>9 ? "":"0") + std::to_string((int)secs);
 
   return s;
 }
